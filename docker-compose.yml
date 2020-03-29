@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+  sonarqube:
+    build:
+      context: sonar
+      dockerfile: Dockerfile
+    expose:
+      - 9000
+    ports:
+      - "9000:9000"
+    networks:
+      - sonarnet
+networks:
+  sonarnet:
